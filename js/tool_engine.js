@@ -5,7 +5,10 @@ function shuffle(array) {
 }
 
 function submitParticipantId() {
+	localStorage.clear()
 	const participantId = document.getElementById('participant-id').value
+	localStorage.setItem('participantId', participantId)
+	localStorage.setItem(participantId, new Date(Date.now()).toUTCString())
 
 	if (participantId && participantId !== "") {
 		document.getElementById('submit-participant-id-button').classList.add('disabled')
@@ -39,4 +42,27 @@ function passThroughUrlParameterFirst() {
 	} else {
 		document.getElementById('url-parameter-second').classList.remove('d-none')
 	}
+}
+
+function saveResultsToFile() {
+	const id = localStorage.participantId
+	const timestamp = localStorage.getItem(id)
+	let csvContent = "data:text/csv;charset=utf-8,";
+
+	let keys = Object.keys(localStorage),
+        i = 0, key;
+
+    for (; key = keys[i]; i++) {
+    	const value = localStorage.getItem(key)
+    	const row = `${key},${value}`
+    	csvContent += row + "\r\n";
+    }
+
+    const encodedUri = encodeURI(csvContent)
+	let link = document.createElement("a")
+	link.setAttribute("href", encodedUri)
+	link.setAttribute("download", `colour_experiment_${id}_${timestamp}.csv`)
+	document.body.appendChild(link)
+
+	link.click()
 }

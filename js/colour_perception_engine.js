@@ -45,9 +45,13 @@ function loadStimuli(imagePath) {
 }
 
 function submitPerception() {
+	const imagePath = document.getElementById('colour_perception_image').src
 	const red = document.getElementById('red').value
 	const green = document.getElementById('green').value
 	const blue = document.getElementById('blue').value
+
+	const id = localStorage.participantId
+	localStorage.setItem(`${id}-cp-${imagePath}-rgb`, `${red},${green},${blue}`)
 
 	if (index < colourPerceptionImages.length) {
 		loadNextStimuli()
@@ -59,8 +63,6 @@ function submitPerception() {
 		} else {
 			document.getElementById('thank-you').classList.remove('d-none')
 		}
-
 	}
-	
 }
 
