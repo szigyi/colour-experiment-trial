@@ -1,0 +1,35 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery-3.6.3.min.js"></script>
+	<script src="js/tool_engine.js"></script>
+	<script src="js/short_term_memory_engine.js"></script>
+</head>
+<body onload="startShortTermMemory()">
+	<section class="container">
+		<h1>Short Term Memory<h4 id="image-number-tracker"></h4></h1>
+		<section id="image_container"></section>
+		<form id="short-term-memory-form" class="d-none">
+			<label for="red" class="form-label">Red</label>
+			<input type="range" class="form-range" min="0" max="100" value="0" step="1" class="slider" id="red"  list="steplist">
+			<label for="green" class="form-label">Green</label>
+			<input type="range" class="form-range" min="0" max="100" value="0" step="1" class="slider" id="green"  list="steplist">
+			<label for="blue" class="form-label">Blue</label>
+			<input type="range" class="form-range" min="0" max="100" value="0" step="1" class="slider" id="blue"  list="steplist">
+
+			<datalist id="steplist">
+			    <option>0</option>
+			    <option>25</option>
+			    <option>50</option>
+			    <option>75</option>
+			    <option>100</option>
+			</datalist>
+			<input type="button"class="btn btn-primary" id="submit-short-term-button" name="submit" value="Submit" onclick="submitShortTermMemory()">
+			<a href="d_thank_you.html" id="thank-you" class="btn btn-primary d-none" role="button">Press for the next page</a>
+			<a href="b_colour_perception_instruction.html" id="colour-perception" class="btn btn-primary d-none" role="button">Press for the next page</a>
+		</form>
+	</section>
+</body>
+</html>

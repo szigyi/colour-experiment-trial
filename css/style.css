@@ -1,0 +1,9 @@
+
+.image {
+	width: 50%;
+}
+
+.blur {
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+}
