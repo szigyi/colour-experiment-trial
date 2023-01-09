@@ -66,7 +66,7 @@ function submitShortTermMemory() {
 	if (index < shortTermMemoryImages.length) {
 		loadNextStimuli()
 	} else {
-		document.getElementById('submit-short-term-button').remove()
+		document.getElementById('submit-short-term-button').classList.add('disabled')
 
 		if (hasUrlParameterFirst()) {
 			document.getElementById('colour-perception').classList.remove('d-none')
@@ -86,3 +86,4 @@ function showSlidersOnly() {
 	document.getElementById('short_term_memory_image').classList.add('d-none')
 	document.getElementById('short-term-memory-form').classList.remove('d-none')
 }
+

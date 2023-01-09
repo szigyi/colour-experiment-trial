@@ -56,7 +56,7 @@ function submitPerception() {
 	if (index < colourPerceptionImages.length) {
 		loadNextStimuli()
 	} else {
-		document.getElementById('submit-perception-button').remove()
+		document.getElementById('submit-perception-button').classList.add('disabled')
 
 		if (hasUrlParameterFirst()) {
 			document.getElementById('short-term-memory').classList.remove('d-none')
