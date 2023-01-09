@@ -7,3 +7,36 @@
 	filter: blur(8px);
 	-webkit-filter: blur(8px);
 }
+
+/* red slider */
+form #red.form-range::-webkit-slider-thumb {
+  background: red;
+}
+form #red.form-range::-moz-range-thumb {
+  background: red;
+}
+form #red.form-range::-ms-thumb {
+  background: red;
+}
+
+/* green slider */
+form #green.form-range::-webkit-slider-thumb {
+  background: green;
+}
+form #green.form-range::-moz-range-thumb {
+  background: green;
+}
+form #green.form-range::-ms-thumb {
+  background: green;
+}
+
+/* blue slider */
+form #blue.form-range::-webkit-slider-thumb {
+  background: blue;
+}
+form #blue.form-range::-moz-range-thumb {
+  background: blue;
+}
+form #blue.form-range::-ms-thumb {
+  background: blue;
+}
