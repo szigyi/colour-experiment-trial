@@ -46,12 +46,13 @@ function loadStimuli(imagePath) {
 
 function submitPerception() {
 	const imagePath = document.getElementById('colour_perception_image').src
+	const imageOrder = document.getElementById('image-number-tracker').textContent
 	const red = document.getElementById('red').value
 	const green = document.getElementById('green').value
 	const blue = document.getElementById('blue').value
 
 	const id = localStorage.participantId
-	localStorage.setItem(`${id}-cp-${imagePath}-rgb`, `${red},${green},${blue}`)
+	localStorage.setItem(`${id}::colour-perception::${imagePath}::${imageOrder}`, `${red}::${green}::${blue}`)
 
 	if (index < colourPerceptionImages.length) {
 		loadNextStimuli()

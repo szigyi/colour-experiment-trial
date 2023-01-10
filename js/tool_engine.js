@@ -47,15 +47,23 @@ function passThroughUrlParameterFirst() {
 function saveResultsToFile() {
 	const id = localStorage.participantId
 	const timestamp = localStorage.getItem(id)
-	let csvContent = "data:text/csv;charset=utf-8,";
+	let csvContent = "data:text/csv;charset=utf-8\r\n,participant-id,experiment-type,image,image-order,red,green,blue\r\n";
 
 	let keys = Object.keys(localStorage),
         i = 0, key;
 
     for (; key = keys[i]; i++) {
-    	const value = localStorage.getItem(key)
-    	const row = `${key},${value}`
-    	csvContent += row + "\r\n";
+        if (key !== "participantId" && key !== id) {
+            const value = localStorage.getItem(key)
+            const subInfo = key.split("::")
+            const pId = subInfo[0]
+            const experimentType = subInfo[1]
+            const image = subInfo[2]
+            const imageOrder = subInfo[3]
+            const rgb = value.split("::")
+            const row = `${pId},${experimentType},${image},${imageOrder},${rgb[0]},${rgb[1]},${rgb[2]}`
+            csvContent += row + "\r\n";
+        }
     }
 
     const encodedUri = encodeURI(csvContent)

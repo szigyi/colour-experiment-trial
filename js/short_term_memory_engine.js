@@ -56,12 +56,13 @@ function loadStimuli(imagePath) {
 
 function submitShortTermMemory() {
 	const imagePath = document.getElementById('short_term_memory_image').src
+	const imageOrder = document.getElementById('image-number-tracker').textContent
 	const red = document.getElementById('red').value
 	const green = document.getElementById('green').value
 	const blue = document.getElementById('blue').value
 
 	const id = localStorage.participantId
-	localStorage.setItem(`${id}-stm-${imagePath}-rgb`, `${red},${green},${blue}`)
+	localStorage.setItem(`${id}::short-term-memory::${imagePath}::${imageOrder}`, `${red}::${green}::${blue}`)
 
 	if (index < shortTermMemoryImages.length) {
 		loadNextStimuli()
