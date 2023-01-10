@@ -9,19 +9,35 @@
 </head>
 <body onload="startColourPerception()">
 	<section class="container">
-		<h1>Colour Perception <h4 id="image-number-tracker"></h4></h1>
-		<section id="image_container"></section>
-		<form id="colour-perception-form">
-			<label for="red" class="form-label">Red</label>
-			<input type="range" class="form-range" min="0" max="100" value="0" step="1" class="slider" id="red">
-			<label for="green" class="form-label">Green</label>
-			<input type="range" class="form-range" min="0" max="100" value="0" step="1" class="slider" id="green">
-			<label for="blue" class="form-label">Blue</label>
-			<input type="range" class="form-range" min="0" max="100" value="0" step="1" class="slider" id="blue">
+		<section id="header">
+			<h1>Colour Perception</h1>
+			<h4 id="image-number-tracker"></h4>
+		</section>
 
-			<input type="button"class="btn btn-primary" id="submit-perception-button" name="submit" value="Submit" onclick="submitPerception()">
-			<a href="d_thank_you.html" id="thank-you" class="btn btn-primary d-none" role="button">Press for the next page</a>
-			<a href="c_short_term_memory_instruction.html" id="short-term-memory" class="btn btn-primary d-none" role="button">Press for the next page</a>
+		<section id="image_container" class="mb-3"></section>
+		<form id="colour-perception-form">
+			<div class="row">
+				<label for="red" class="col-sm-1 col-form-label">Red</label>
+				<div class="col-sm-11">
+					<input type="range" class="form-range" min="0" max="100" value="0" step="1" id="red">
+				</div>
+			</div>
+			<div class="row">
+				<label for="green" class="col-sm-1 col-form-label">Green</label>
+				<div class="col-sm-11">
+					<input type="range" class="form-range" min="0" max="100" value="0" step="1" id="green">
+				</div>
+			</div>
+			<div class="row mb-3">
+				<label for="blue" class="col-sm-1 col-form-label">Blue</label>
+				<div class="col-sm-11">
+					<input type="range" class="form-range" min="0" max="100" value="0" step="1" id="blue">
+				</div>
+			</div>
+
+			<input type="button" class="btn btn-primary" id="submit-perception-button" name="submit" value="Submit" onclick="submitPerception()">
+			<a href="d_thank_you.html" id="thank-you" class="btn btn-success d-none" role="button">Press for the next page</a>
+			<a href="c_short_term_memory_instruction.html" id="short-term-memory" class="btn btn-success d-none" role="button">Press for the next page</a>
 		</form>
 	</section>
 </body>
