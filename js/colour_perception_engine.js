@@ -5,9 +5,36 @@ const folder = "images/colour_perception_images/";
 
 function startColourPerception() {
 	colourPerceptionImages = shuffle([
-		"bar1.jpg",
-		"bar4.jpg",
-		"bar9.jpg"
+        "bar1.jpg",
+        "bar10.jpg",
+        "bar11.jpg",
+        "bar4.jpg",
+        "bar9.jpg",
+        "bathroom_zoom0_1.jpg",
+        "bathroom_zoom0_11.jpg",
+        "bathroom_zoom0_14.jpg",
+        "bathroom_zoom0_15.jpg",
+        "bathroom_zoom0_3.jpg",
+        "dining2.jpg",
+        "dining_zoom0_11.jpg",
+        "dining_zoom0_16.jpg",
+        "dining_zoom0_2.jpg",
+        "dining_zoom0_4.jpg",
+        "kitchen_zoom0_11.jpg",
+        "kitchen_zoom0_16.jpg",
+        "kitchen_zoom0_17.jpg",
+        "kitchen_zoom0_24.jpg",
+        "kitchen_zoom0_9.jpg",
+        "office_zoom0_11.jpg",
+        "office_zoom0_3.jpg",
+        "office_zoom0_4.jpg",
+        "office_zoom0_7.jpg",
+        "office_zoom0_8.jpg",
+        "studio1.jpg",
+        "studio11.jpg",
+        "studio13.jpg",
+        "studio5.jpg",
+        "studio6.jpg"
 	])
 
 	loadNextStimuli()

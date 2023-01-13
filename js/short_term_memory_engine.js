@@ -1,17 +1,41 @@
 
 let shortTermMemoryImages;
 let index = 0
-let pageLoadedTimestamp;
-let loadImageTimestamp;
 const folder = "images/short_term_memory_images/";
 
 function startShortTermMemory() {
-	pageLoadedTimestamp = Date.now()
-	loadImageTimestamp = pageLoadedTimestamp + 30000
 
 	shortTermMemoryImages = shuffle([
-		"bar10.jpg",
-		"bar11.jpg"
+        "bar12.jpg",
+        "bar2.jpg",
+        "bar3.jpg",
+        "bar6.jpg",
+        "bar8.jpg",
+        "bathroom_zoom0_10.jpg",
+        "bathroom_zoom0_13.jpg",
+        "bathroom_zoom0_2.jpg",
+        "bathroom_zoom0_6.jpg",
+        "bathroom_zoom0_7.jpg",
+        "dining1.jpg",
+        "dining_zoom0_1.jpg",
+        "dining_zoom0_18.jpg",
+        "dining_zoom0_3.jpg",
+        "dining_zoom0_9.jpg",
+        "kitchen_zoom0_15.jpg",
+        "kitchen_zoom0_19.jpg",
+        "kitchen_zoom0_20.jpg",
+        "kitchen_zoom0_22.jpg",
+        "kitchen_zoom0_26.jpg",
+        "office_zoom0_1.jpg",
+        "office_zoom0_10.jpg",
+        "office_zoom0_2.jpg",
+        "office_zoom0_5.jpg",
+        "office_zoom0_9.jpg",
+        "studio12.jpg",
+        "studio3.jpg",
+        "studio4.jpg",
+        "studio7.jpg",
+        "studio8.jpg"
 	])
 
 	loadNextStimuli()
