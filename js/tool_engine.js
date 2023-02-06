@@ -44,6 +44,17 @@ function passThroughUrlParameterFirst() {
 	}
 }
 
+function findTheSourceOfThePage() {
+	const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    const sourceParam = urlParams.get('source')
+	if (sourceParam === 'short-term-memory') {
+		document.getElementById('colour-perception').classList.remove('d-none')
+	} else {
+		document.getElementById('short-term-memory').classList.remove('d-none')
+	}
+}
+
 function saveResultsToFile() {
 	const id = localStorage.participantId
 	const timestamp = localStorage.getItem(id)
