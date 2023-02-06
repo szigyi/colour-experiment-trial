@@ -9,10 +9,13 @@
 <body>
 	<section class="container">
 		<h1>Welcome to the experiment</h1>
-		<p>Explanation of the experiment</p>
-		<p>What you should expect</p>
-		<p>Please, do not refresh the page nor use the back button at any stage of the experiment.</p>
-
+		<p>Welcome to this experiment focusing on mood and colour perception. You should have already filled out the questionnaire given to you by the researcher, and have been appropriately briefed on the study, your right to withdraw at any time, and consent given.</p>
+		<p><strong>If you have not given consent to partake in this study, please do not proceed. Inform your researcher immediately.</strong></p>
+		<p>Here is what to expect from the following experiment:</p>
+		<p>It consists of two randomised cognitive tasks, one colour perception and one short-term memory. Instructions for each task will be given before you begin.</p>
+		<p>Please answer honestly and to the best of your ability, there are no wrong answers! </p>
+		<p>Thank you for choosing to take part in this exciting research, when you are ready you make click below to begin.</p>
+		<hr/>
 		<form>
 			<div class="mb-3">
 			  <label for="participant-id" class="form-label">Participant id</label>
@@ -20,9 +23,12 @@
 			</div>
 			<input type="button" class="btn btn-primary" id="submit-participant-id-button" name="submit" value="Submit" onclick="submitParticipantId()">
 			<p id="form-error" class="badge text-bg-danger d-none">Please provide your participant id and click 'Submit' in order to continue</p>
-			<a href="b_colour_perception_instruction.html?first" id="colour-perception" class="btn btn-success d-none" role="button">Press for the next page</a>
-			<a href="c_short_term_memory_instruction.html?first" id="short-term-memory" class="btn btn-success d-none" role="button">Press for the next page</a>
+			<a href="b_colour_perception_instruction.html?first" id="colour-perception" class="btn btn-success d-none" role="button">Click here for the next page</a>
+			<a href="c_short_term_memory_instruction.html?first" id="short-term-memory" class="btn btn-success d-none" role="button">Click here for the next page</a>
 		</form>
+
+		<small>Please, do not refresh the page nor use the back button at any stage of the experiment.</small>
+		<small>If you experience technical difficulties then please restart the whole experiment by visiting this page, the Welcome page.</small>
 	</section>
 </body>
 </html>
