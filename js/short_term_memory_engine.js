@@ -50,10 +50,7 @@ function loadNextStimuli() {
 	const imagePath = nextStimuli()
 	loadStimuli(imagePath)
 
-	setTimeout(function () {
-		blurStimuli()
-		setTimeout(showSlidersOnly, 2000)
-	}, 3000)
+	setTimeout(showSlidersOnly, 250)
 }
 
 function nextStimuli() {
