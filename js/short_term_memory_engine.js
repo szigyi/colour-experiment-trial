@@ -95,13 +95,7 @@ function submitShortTermMemory() {
 		} else {
 			document.getElementById('thank-you').classList.remove('d-none')
 		}
-
 	}
-	
-}
-
-function blurStimuli() {
-	document.getElementById('short_term_memory_image').classList.add('blur')
 }
 
 function showSlidersOnly() {
