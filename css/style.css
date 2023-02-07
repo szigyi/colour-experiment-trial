@@ -24,6 +24,13 @@ section.container {
     margin-bottom: 0.6em;
 }
 
+.form-range::-webkit-slider-runnable-track {
+  background: #eeeeee !important;
+}
+.form-range::-moz-range-track {
+  background: #eeeeee !important;
+}
+
 /* red slider */
 form #red.form-range::-webkit-slider-thumb {
   background: red;
