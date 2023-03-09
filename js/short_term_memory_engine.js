@@ -49,8 +49,10 @@ function loadNextStimuli() {
 
 	const imagePath = nextStimuli()
 	loadStimuli(imagePath)
+}
 
-	setTimeout(showSlidersOnly, 250)
+function setTimeShowingStimuli() {
+    setTimeout(showSlidersOnly, 250)
 }
 
 function nextStimuli() {
@@ -66,6 +68,7 @@ function loadStimuli(imagePath) {
 	if (existingImage) existingImage.remove()
 
 	var image = document.createElement('img')
+	image.addEventListener('load', setTimeShowingStimuli)
 	image.src = imagePath
 	image.setAttribute("id", "short_term_memory_image")
 	image.classList.add('image')
