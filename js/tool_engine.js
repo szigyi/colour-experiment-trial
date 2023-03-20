@@ -84,4 +84,11 @@ function saveResultsToFile() {
 	document.body.appendChild(link)
 
 	link.click()
+
+	createEmailLink()
+}
+
+function createEmailLink() {
+    const address = `mailto:21502361@student.uwl.ac.uk?subject=Participant_${localStorage.participantId}&body=Please Attach the file with your answers`
+    document.getElementById('email-to-collect').href = address
 }
